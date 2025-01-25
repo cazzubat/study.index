@@ -20,16 +20,16 @@ def jogo():
         return jogo()
 
     # Verificação Humano vitória
-    if (maquina == 'papel' and escolha == 'tesoura') or \
+    if  (maquina == 'papel' and escolha == 'tesoura') or \
         (maquina == 'tesoura' and escolha == 'pedra') or \
         (maquina == 'pedra' and escolha == 'papel'):
         ponto_humano += 1
-        print(f'Você marcou {ponto_humano} pontos.')
+        print(f'Você marcou {ponto_humano}')
 
     # Verificação Máquina vitória
     elif (maquina == 'tesoura' and escolha == 'papel') or \
-        (maquina == 'pedra' and escolha == 'tesoura') or \
-        (maquina == 'papel' and escolha == 'pedra'):
+         (maquina == 'pedra' and escolha == 'tesoura') or \
+         (maquina == 'papel' and escolha == 'pedra'):
         ponto_maquina += 1
         print(f'Você perdeu! A máquina escolheu {maquina} e agora tem {ponto_maquina} pontos no placar.')
 
