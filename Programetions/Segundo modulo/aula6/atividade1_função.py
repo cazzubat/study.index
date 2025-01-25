@@ -54,4 +54,4 @@ ponto_humano, ponto_maquina = jogo()
 def placar(ponto_humano, ponto_maquina):
     print(f'\nO placar atual é: Você {ponto_humano} x {ponto_maquina} Máquina')
 
-placar(ponto_humano,ponto_maquina) 
+placar(ponto_humano,ponto_maquina)
