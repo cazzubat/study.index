@@ -1,8 +1,9 @@
-# Exercício 4: Crie um programa que recebe uma string como entrada e verifica se ela começa com a letra 'A'. Imprima "Começa com A" se for verdadeiro, caso contrário, imprima "Não começa com A".
+# - Crie uma função multiplicar_tupla que recebe uma tupla de números e retorna o produto de todos os elementos da tupla.
 
-frase = input('Insira uma frase: ').lower()
+def multiplicar_tupla(tupla):
+  somaresultado = 1
+  for numero in tupla:
+    somaresultado *= numero
+  return somaresultado
 
-if frase[0] == 'a':
-    print('A Primeira letra é A.')
-else:
-    print('Não começa com a letra A.')
+print(multiplicar_tupla((4,5,6)))

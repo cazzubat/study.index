@@ -1,26 +1,17 @@
-estudante = {
-    'nome': 'Gabriel',
-    'idade': 17,
-    'cursos': ['informatica', 'ingles', 'espanhol', 'administração']
-}
+# Exercício 7: Crie um programa que recebe como entrada a altura, profissão e nome de um individuo e: 
+# Se o nome for Alice e a altura for 169, exiba a mensagem: "Suspeito encontrado"
+# Se o nome for Douglas ou Rafael e a profissão começar com a letra C, exiba a mensagem: "Suspeito encontrado"
+# Se o nome encontrado for Thiago e a profissão for 'Professor', exiba mensagem: Suspeito encontrado!
 
-estudante['matricula'] = True
+profissao =  input('Insira sua profissao: ').lower()
+usuario = input ('Insira o seu nome: ').lower()
+altura = input('Insira sua altura: ')
 
-estudante['idade'] = 22
-
-del estudante['cursos']
-
-if 'cursos' in estudante:
-    print(estudante['cursos'])
+if usuario == 'alice' and altura == '169':
+    print('Suspeito encontrado')
+elif (usuario == 'douglas' or usuario == 'rafael') and profissao[0] == 'c':
+    print('Suspeito encontrado')
+elif usuario == 'thiago' and profissao == 'professor':
+    print('Suspeito encontrado!')
 else:
-    print("A chave 'cursos' foi removida.")
-
-dict.items(estudante)
-print(estudante)
-
-user_estudante = estudante.get('nome')
-
-if user_estudante is None:
-    print('A chave não foi encontrada')
-else:
-    print(user_estudante)
+    print('Acesso concedido')

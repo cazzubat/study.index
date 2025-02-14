@@ -1,8 +1,10 @@
-# Exercício 3: Escreva um programa que solicita a idade do usuário e determina se ele é elegível para votar (18 anos ou mais).
+# - Crie uma função soma que receba dois números como parâmetros e retorne a soma deles.
 
-idade = int(input('Insira sua idade para vermos se você pode votar: '))
+numero1 = int(input('Insira o primeiro numero: '))
+numero2 = int(input('Insira o segundo numero: '))
 
-if idade >= 18:
-    print(f'Vc tem {idade}, pode votar.')
-else:
-    print(f'Vc tem {idade}, não pode votar.')
+def somar():
+    soma = numero1 + numero2
+    return soma
+
+print(somar())

@@ -1,11 +1,8 @@
-estudante = {
-    'nome': 'Gabriel',
-    'idade': 17,
-    'cursos': ['informatica', 'ingles', 'espanhol', 'administração']
-}
+# Exercício 4: Crie um programa que recebe uma string como entrada e verifica se ela começa com a letra 'A'. Imprima "Começa com A" se for verdadeiro, caso contrário, imprima "Não começa com A".
 
-estudante['matricula'] = True
+frase = input('Insira uma frase: ').lower()
 
-estudante['idade'] = 22
-
-print(estudante['idade'])
+if frase[0] == 'a':
+    print('A Primeira letra é A.')
+else:
+    print('Não começa com a letra A.')

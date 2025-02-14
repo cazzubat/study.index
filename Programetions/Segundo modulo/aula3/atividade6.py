@@ -1,8 +1,8 @@
-# Exercício 6: Crie um programa que determina se um ano dado é bissexto. Um ano bissexto é divisível por 4, mas não é divisível por 100, a menos que também seja divisível por 400.
+# - Crie uma função chamada contagem_regressiva que recebe um número n e imprime os números de n até 1, em contagem regressiva.
+numero = int(input('Insira um numero inteiro: '))
 
-ano = int(input('Insira os dias de algum tipo dia de ano: '))
+def contagem_regressiva(numero):
+    for percorrer in range(numero, 0, -1):
+        print(percorrer)
 
-if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
-    print(f"O ano {ano} é bissexto.")
-else:
-    print(f"O ano {ano} não é bissexto.")
+contagem_regressiva(numero)

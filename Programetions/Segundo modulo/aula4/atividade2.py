@@ -1,8 +1,14 @@
-# - Crie uma função chamada saudar que recebe o nome de uma pessoa como parâmetro e retorna uma saudação personalizada (ex: "Olá, [nome]!").
+# 32 - Crie um algoritmo que ao ser executado verifica uma variável "chuva" e 
+# se for verdadeiro exibe a mensagem: "Leve um guarda chuva"
+# e se for falso exiba a mensagem: "Olha que dia bonito, nem precisa levar guarda-chuva"
 
-nome = input('Insire seu nome: ')
+import random
 
-def saudacao(nome):
-    return (f'Olá, {nome}')
+clima = ['sol', 'chuva']
 
-print(saudacao(nome))
+clima_aleatorio = random.choice(clima)
+
+if clima_aleatorio == 'chuva':
+    print('Olha que dia bonito, nem precisa levar guarda-chuva')
+else:
+    print('Leve um guarda chuva')

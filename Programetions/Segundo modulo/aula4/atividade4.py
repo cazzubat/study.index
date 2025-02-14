@@ -1,9 +1,10 @@
-# - Crie uma função multiplicar_tupla que recebe uma tupla de números e retorna o produto de todos os elementos da tupla.
+# 34 - Crie um algoritmo que ao ser executado recebe dois valores númericos
+# e imprime qual é o maior dos dois valores.
 
-def multiplicar_tupla(tupla):
-  somaresultado = 1
-  for numero in tupla:
-    somaresultado *= numero
-  return somaresultado
+numero1 = int(input('Insira o primeiro valor: '))
+numero2 = int(input('Insira o segundo valor: '))
 
-print(multiplicar_tupla((4,5,6)))
+if numero1 > numero2:
+    print('O primeiro número é maior que o segundo')
+else:
+    print('O segundo número é maior que o primeiro')

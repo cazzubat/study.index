@@ -1,20 +1,8 @@
-estudante = {
-    'nome': 'Gabriel',
-    'idade': 17,
-    'cursos': ['informatica', 'ingles', 'espanhol', 'administração']
-}
+# Exercício 6: Crie um programa que determina se um ano dado é bissexto. Um ano bissexto é divisível por 4, mas não é divisível por 100, a menos que também seja divisível por 400.
 
-estudante['matricula'] = True
+ano = int(input('Insira os dias de algum tipo dia de ano: '))
 
-estudante['idade'] = 22
-
-del estudante['cursos']
-
-if 'cursos' in estudante:
-    print(estudante['cursos'])
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print(f"O ano {ano} é bissexto.")
 else:
-    print("A chave 'cursos' foi removida.")
-
-dict.items(estudante)
-
-print(estudante)
+    print(f"O ano {ano} não é bissexto.")

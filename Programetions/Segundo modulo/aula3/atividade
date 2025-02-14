@@ -1,10 +1,83 @@
-Dontpad da aula:
-https://dontpad.com/dfs7071412
+#https://dontpad.com/dfs7072112
 
 
-Repo do git:
-git clone https://github.com/thiagooshiro/python-classes.git
+#Link dos exe
+#https://colab.research.google.com/drive/1JctEprXrFF3QB2iVVJIlGDdmQENhYiIW?usp=sharing
 
 
-pasta de exercícios:
-https://github.com/thiagooshiro/python-classes/tree/master/exercises
+#	BOM DIA GALERA
+
+
+#Exercícios de Funções em Python
+#Função Simples
+
+
+
+
+# DEFINIR SE UM NUMERO É PAR OU IMPAR
+
+# Entrada
+numero = int(input("Digite um numero:"))
+resultado = ""
+
+# PROCESSAMENTO
+if numero % 2 == 0:
+    resultado = "O numero é par"
+else:
+    resultado = "O numero é impar"
+
+# SAÍDA (EXIBIÇÃO)
+print(resultado)
+
+#======================================================================
+
+#Logíca de Função
+
+
+def parOuImpar(numero):
+    resultado = ""  
+
+    if numero % 2 == 0:
+        resultado = "O numero é par"
+    else:
+        resultado = "O numero é impar"
+
+        
+    return resultado 
+
+print(parOuImpar(10))
+
+#==============================
+#segundo exemplo
+
+nome = input('Insire seu nome: ')
+
+def saudacao(nome):
+    return (f'Olá, {nome}')
+
+print(saudacao(nome))# sempre chamar de braços abertos
+
+#========================================
+
+#PARAMETRO PADRÃO
+
+def saudacao(nome="Tião do Bar"):# Paramêtro Padrão
+    return f"Ola , seja bem vindo {nome}"
+
+print(saudacao("Ze da carroça"))# sempre chamar de braços abertos
+    
+#===================================================
+
+#Doc de função
+def somar(numero1,numero2):
+    """
+    numero1 -> numero inteiro 
+    numero2 -> numero inteiro 
+    
+    return -> essa função retorna o resultado da soma entre estes dois numeros
+
+    """
+    soma = numero1 + numero2 
+    return soma 
+
+print(somar(5,6))

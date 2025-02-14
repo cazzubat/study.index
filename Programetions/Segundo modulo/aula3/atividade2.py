@@ -1,10 +1,8 @@
-# Exercício 2: Crie um programa que recebe uma string e verifica se a primeira letra é vogal.
+# - Crie uma função chamada saudar que recebe o nome de uma pessoa como parâmetro e retorna uma saudação personalizada (ex: "Olá, [nome]!").
 
-frase = input('Insira uma palavra: ').lower()
+nome = input('Insire seu nome: ')
 
-lista = ['a','e','i','o','u']
+def saudacao(nome):
+    return (f'Olá, {nome}')
 
-if frase[0] in lista:
-    print('tem vogal')
-else:
-    print('não tem vogal')
+print(saudacao(nome))

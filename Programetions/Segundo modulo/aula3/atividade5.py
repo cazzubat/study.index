@@ -1,10 +1,15 @@
-# Exercício 5: Escreva um programa que solicita ao usuário uma senha. Se a senha for "12345", imprima "Acesso concedido"; caso contrário, imprima "Acesso negado".
+# - Crie uma função contar_vogais que receba uma string e conte quantas vogais (a, e, i, o, u) existem nela.
 
-senha_correta = '12345'
+frase = input('Insira uma uma palavra: ')
 
-senha = input('Insira sua senha: ')
+def contar_vogais(frase):
+    vogais = ('a','e','i','o','u')
+    resultado = 0
 
-if senha == senha_correta:
-    print('Acesso concedido.')
-else:
-    print('Acesso negado.')
+    for percorrer in frase:
+        if percorrer in vogais:
+            resultado += 1
+
+    return resultado
+
+print(contar_vogais(frase))

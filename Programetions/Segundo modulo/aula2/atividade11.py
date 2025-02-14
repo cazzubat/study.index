@@ -1,12 +1,24 @@
-lista = [{'nome': 'pedro', 'idade': 10, 'nota': 2.0},
-{'nome': 'gabriel', 'idade': 203, 'nota': 3.0},
-{'nome': 'julio', 'idade': 30, 'nota': 3.0},
-{'nome': 'breno', 'idade': 30, 'nota': 3.0},
-{'nome': 'ana', 'idade': 30, 'nota': 3.0},
-{'nome': 'antonia', 'idade': 30, 'nota': 3.0},
-{'nome': 'angelica', 'idade': 30, 'nota': 3.0},
-]
+# 4 - Escreva um programa que verifica se um número fornecido pelo usuário é primo ou não.
 
-for aluno in lista:
-    if aluno.get('nome')[0] == 'a' and aluno.get('nome')[1] == 'n':
-        print(aluno.get('nome'))
+# Entrada do número
+num = int(input("Digite um número para verificar se é primo: "))
+
+# Verificação inicial
+if num < 2:
+    print(f"{num} não é um número primo.")
+else:
+    divisor = 2
+    eh_primo = True
+
+    # Loop para verificar divisores
+    while divisor < num:
+        if num % divisor == 0:  # Se for divisível por algum número, não é primo
+            eh_primo = False
+            break
+        divisor += 1
+
+    # Resultado
+    if eh_primo:
+        print(f"{num} é um número primo!")
+    else:
+        print(f"{num} não é um número primo.")

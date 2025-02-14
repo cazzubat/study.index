@@ -1,16 +1,17 @@
-estudantes = []
+# 3 - Escreva um programa que solicite repetidamente ao usuário para digitar uma senha até que eles insiram a senha correta, escolhida por você.
 
-for estudante in range(3):
-    nome = input(f'Digite o nome do estudante {estudante+1}: ')
-    idade = int(input(f'Digite a idade do estudante {estudante+1}: '))
-    nota = float(input(f'Digite a nota do estudante{estudante+1}: '))
+senha_correta = '1234'
 
-    estudantes.append({
-        'nome': nome,
-        'idade': idade,
-        'nota': nota
-    })
+senha = input('Digite a senha correta: ')
 
-    print('\nLista de Estudantes:')
-for estudante in estudantes:
-    print(estudante)
+while True:
+
+    if senha == senha_correta:
+        print('Acesso concedido.')
+        break
+    
+    nova_tentiva = input('Insira a senha novamente: ')
+    if nova_tentiva == senha_correta:
+        print('Acesso concedido.')
+        break
+    

@@ -1,10 +1,13 @@
-# - Crie uma função calcular_imc que receba o peso e altura de uma pessoa e calcule o Índice de Massa Corporal (IMC), com valores padrões de peso 70 kg e altura 1.75 m.
+# 38 - Crie um algoritmo que ao ser executado recebe uma frase,
+# e verifica se uma letra escolhida por você está presente na frase
+# caso a frase contenha a letra escolhida deve ser exibida a mensagem "A letra <letra> está presente na frase"
+# caso contrário deve ser exibida a frase "A letra <letra> não está contida na frase"
 
-peso = float(input('Insira seu peso: '))
-altura = float (input('Insira sua altura: '))
+frase = input('Insira uma palavra: ')
 
-def calcular_imc():
-    imc = peso / altura ** 2
-    return imc
+letra_a = 'a'
 
-print(f'{calcular_imc():.2f}')
+if letra_a in frase:
+    print('A letra A está presente na frase')
+else:
+    print('A letra A não está presente na frase')

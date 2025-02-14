@@ -1,31 +1,7 @@
-estudante = {
-    'nome': 'Gabriel',
-    'idade': 17,
-    'cursos': ['informatica', 'ingles', 'espanhol', 'administração']
-}
+# 1 - Escreva um programa que recebe um número inteiro do usuário e então conte de volta desse número até 1, imprimindo cada um dos números entre o valor recebido e 1.
 
-estudante['matricula'] = True
+numero = int(input('Insira um numero: '))
 
-estudante['idade'] = 22
-
-del estudante['cursos']
-
-if 'cursos' in estudante:
-    print(estudante['cursos'])
-else:
-    print("A chave 'cursos' foi removida.")
-
-dict.items(estudante)
-print(estudante)
-
-user_estudante = estudante.get('nome')
-
-if user_estudante is None:
-    print('A chave não foi encontrada')
-else:
-    print(user_estudante)
-
-if 'nota' in estudante:
-    print('Há nota dentro de estudante.')
-else:
-    print('Não há nota dentro de estudante.')
+while numero >= 1:
+    print(numero)
+    numero -= 1

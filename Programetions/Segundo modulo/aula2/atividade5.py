@@ -1,16 +1,10 @@
-estudante = {
-    'nome': 'Gabriel',
-    'idade': 17,
-    'cursos': ['informatica', 'ingles', 'espanhol', 'administração']
-}
+# Exercício 5: Escreva um programa que solicita ao usuário uma senha. Se a senha for "12345", imprima "Acesso concedido"; caso contrário, imprima "Acesso negado".
 
-estudante['matricula'] = True
+senha_correta = '12345'
 
-estudante['idade'] = 22
+senha = input('Insira sua senha: ')
 
-del estudante['cursos']
-
-if 'cursos' in estudante:
-    print(estudante['cursos'])
+if senha == senha_correta:
+    print('Acesso concedido.')
 else:
-    print("A chave 'cursos' foi removida.")
+    print('Acesso negado.')
