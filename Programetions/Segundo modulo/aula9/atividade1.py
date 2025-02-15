@@ -19,10 +19,10 @@ class Estante:
         self.terror = terror
 
 class Usuario:
-    def __init__(self, nome, cpf, identidade):
+    def __init__(self, nome, cpf, numero_de_matricula):
         self.nome = nome
         self.cpf = cpf
-        self.identidade = identidade
+        self.numero_de_matricula = numero_de_matricula
 
 class Funcionario:
     def __init__(self, id, nome_funcionario, senha):
@@ -32,9 +32,10 @@ class Funcionario:
         
 
 class Biblioteca:
-    def __init__(self, endereço, nome_biblioteca):
+    def __init__(self, endereço, nome_biblioteca, telefone):
         self.endereço = endereço
         self.nome_biblioteca = nome_biblioteca
+        self.telefone = telefone
 
 memorias = Livro('Memórias póstumas', 'Machadão', '1898', 'romance', 'primeiro de abril', '01A')
 print(memorias)
