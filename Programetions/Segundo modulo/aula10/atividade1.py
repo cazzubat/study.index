@@ -1,3 +1,5 @@
+import os
+
 class Livro:
     def __init__(self, titulo, autor, ano, categoria, editora, ISBN):
         self.titulo = titulo
@@ -56,6 +58,11 @@ class Biblioteca:
 
 
 
+def continue1():
+        continue1 = (input('Você deseja voltar ao menu: Y/N ')).lower()
+        if continue1 == 'y':
+            return menu()
+
 def menu():
     print('Escolha sua opção:')
     print('1 - Cadastrar usuário')
@@ -72,11 +79,11 @@ def menu():
         try:
             nome = input('Insira seu nome: ')
             sobrenome = input('Insira seu sobrenome: ')
-            matricula = input('Insira sua matricula')
+            matricula = input('Insira sua matricula: ')
             endereço = input('Insira seu endereço: ')
             cpf = input('Insira seu cpf: ')
             data_de_nascimento = input('Insira sua data de nascimento: ')
-            funcao = input('Insira sua função na biblioteca, caso não tenha digite(NÃO): ')
+            funcao = input('Insira sua função na biblioteca, caso não tenha digite (NÃO): ')
             
             armazenar_pessoa = Pessoa(nome,sobrenome,matricula,endereço,cpf,data_de_nascimento,funcao)
             biblioteca.cadastrar_usuarios(armazenar_pessoa)
@@ -84,8 +91,9 @@ def menu():
         except ValueError:
             return print('Você inseriu um valor invalido. ')
         
+        continue1()
         
-    if opcao == '2':
+    elif opcao == '2':
         try:
             titulo = input('Insira o titulo do livro: ')
             autor = input('Insira o nome do autor: ')
@@ -99,8 +107,10 @@ def menu():
         
         except ValueError:
             return print('Você inseriu um valor invalido. ')
-    
-    if opcao == '3':
+
+        continue1()
+
+    elif opcao == '3':
         try:
             emprestar_livro = input('Insira o nome do livro que deseja: ')
             
@@ -111,6 +121,28 @@ def menu():
                     
         except ValueError:
             return print('Você inseriu um valor invalido. ')
-
-    if opcao == '4':
         
+        continue1()
+
+    elif opcao == '4':
+        try:
+            devolver_livro = input('Digite o livro que deseja devolver: ')
+
+            for livro in biblioteca.catalogo:
+                if devolver_livro == livro:
+                    biblioteca.devolver_livro(devolver_livro)
+                    print('Você Devolveu o livro.')
+        except ValueError:
+            return print('Você inseriu um valor invalido. ')
+        
+        continue1()
+        
+    elif opcao == '5':
+        return print('Você saiu do menu.')
+    
+    else:
+        print("\n" * os.get_terminal_size().lines)
+        print('Você inseriu um valor invalido.')
+        return menu()
+
+menu()
