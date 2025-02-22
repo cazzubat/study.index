@@ -21,7 +21,7 @@ modelo.fit(X, sentimentos)
 
 # Testando com um novo comentário
 novo_comentario = []
-for i in range(4): 
+for i in range(2): 
     novo_comentario.append(input('Insira uma frase para testar: '))
 X_novo = vectorizer.transform(novo_comentario)
 previsao = modelo.predict(X_novo)
