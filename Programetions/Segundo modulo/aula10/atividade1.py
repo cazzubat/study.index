@@ -62,6 +62,9 @@ def continue1():
         continue1 = (input('Você deseja voltar ao menu: Y/N ')).lower()
         if continue1 == 'y':
             return menu()
+        else:
+            print("\n" * os.get_terminal_size().lines)
+            return print('Você saiu do menu.')
 
 def menu():
     print('Escolha sua opção:')
