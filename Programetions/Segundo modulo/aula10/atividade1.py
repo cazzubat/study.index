@@ -13,7 +13,6 @@ class Livro:
     def __str__(self):
         return self.titulo
 
-
 class Pessoa:
     def __init__(self, nome, sobrenome, matricula, endereco, cpf, data_de_nascimento, funcao):
         self.nome = nome
@@ -66,6 +65,28 @@ def continue1():
             print("\n" * os.get_terminal_size().lines)
             return print('Você saiu do menu.')
 
+biblioteca = Biblioteca('Angra Reis', 'Rua são paulo')
+
+def verificar_status_livro():
+    escolher_livro = input('Insira o título do livro que deseja verificar: ').strip().lower()
+
+    if not biblioteca.catalogo:  # Verifica se há livros cadastrados
+        print('O catálogo está vazio.')
+        return
+
+    livro_encontrado = False  # Variável para rastrear se o livro foi encontrado
+
+    for livro in biblioteca.catalogo:
+        if livro.titulo.lower() == escolher_livro:
+            livro_encontrado = True  
+            status = "emprestado" if livro.emprestado else "disponível"
+            print(f'O livro "{livro.titulo}" está {status}.')
+            break  
+
+    if not livro_encontrado:  
+        print('Não temos esse livro no catálogo.')
+
+
 def menu():
     print('Escolha sua opção:')
     print('1 - Cadastrar usuário')
@@ -73,8 +94,7 @@ def menu():
     print('3 - Emprestar livro')
     print('4 - Devolver livro')
     print('5 - Sair do sistema')
-
-    biblioteca = Biblioteca('Angra Reis', 'Rua são paulo')
+    print('6 - Status do livro')
 
     opcao = input('Digite sua opcao: ')
     
@@ -115,34 +135,50 @@ def menu():
 
     elif opcao == '3':
         try:
-            emprestar_livro = input('Insira o nome do livro que deseja: ')
+            emprestar_livro = input('Insira o título do livro que deseja: ')
             
             for livro in biblioteca.catalogo:
-                if emprestar_livro == livro:
-                    biblioteca.emprestar_livro(emprestar_livro)
-                    print('Vocẽ pegou um livro emprestado.')
-                    
+                if livro.titulo.lower() == emprestar_livro.lower():
+                    if not livro.emprestado: 
+                        biblioteca.emprestar_livro(livro)
+                        print(f'Você pegou o livro "{livro.titulo}" emprestado.')
+                    else:
+                        print(f'O livro "{livro.titulo}" está emprestado.')
+                    break
+            else:
+                print('Não temos esse livro no catálogo.')
+
         except ValueError:
-            return print('Você inseriu um valor invalido. ')
-        
+            return print('Você inseriu um valor inválido. ')
+
         continue1()
 
     elif opcao == '4':
         try:
-            devolver_livro = input('Digite o livro que deseja devolver: ')
+            devolver_livro = input('Digite o título do livro que deseja devolver: ')
 
             for livro in biblioteca.catalogo:
-                if devolver_livro == livro:
-                    biblioteca.devolver_livro(devolver_livro)
-                    print('Você Devolveu o livro.')
+                if livro.titulo.lower() == devolver_livro.lower():
+                    biblioteca.devolver_livro(livro)
+                    print(f'Você devolveu o livro "{livro.titulo}".')
+                    break
+            else:
+                print('Não temos esse livro no catálogo.')
+
         except ValueError:
-            return print('Você inseriu um valor invalido. ')
-        
+            return print('Você inseriu um valor inválido.')
+
         continue1()
+
         
     elif opcao == '5':
         return print('Você saiu do menu.')
     
+    elif opcao == '6':
+        verificar_status_livro()
+
+        continue1()
+
     else:
         print("\n" * os.get_terminal_size().lines)
         print('Você inseriu um valor invalido.')
