@@ -147,8 +147,11 @@ def menu():
         continue1()
 
     elif opcao == '2':
-        for usuario in biblioteca.usuarios:
-            print(usuario.get_dict_user())
+        if biblioteca.usuarios:
+            for usuario in biblioteca.usuarios:
+                print(usuario.get_dict_user())
+        else:
+            print('Não há nenhum usuário cadastrado.')
     
         continue1()
     
@@ -169,13 +172,12 @@ def menu():
         continue1()
 
     elif opcao == '4':
-        try:
+        if biblioteca.catalogo:
             for livro in biblioteca.catalogo:
                 print(livro.get_dict())
-        
-        except ValueError:
-            print('Você inseriu um valor inválido.')
-        
+        else:
+            print('Não há nenhum livro cadastrado.')
+       
         continue1()
     
     elif opcao == '5':
@@ -221,20 +223,20 @@ def menu():
     
     elif opcao == '8':
         try:
-            for i, usuario in enumerate(biblioteca.usuarios, start=1):
-                print(f'Índice {i} - {usuario.get_dict_user()}')
+            for i, livro in enumerate(biblioteca.catalogo, start=1):
+                print(f'Índice {i} - {livro.get_dict()}')
             
             print('-'*10)
 
-            indice = int(input('Escolha pelo índice o usuário que deseja remover: '))
+            indice = int(input('Escolha pelo índice o livro que deseja remover: '))
 
             if 1 <= indice <= len(biblioteca.catalogo):
                 biblioteca.catalogo.pop(indice - 1)
-                print("Usuário removido com sucesso!")
+                print("Livro removido com sucesso!")
             else:
                 print("Índice inválido!")
         except ValueError:
-            print('Você inseriu um valor inválido.')        
+            print('Você inseriu um valor inválido.')         
 
         continue1()
 
