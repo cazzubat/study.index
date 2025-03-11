@@ -1,11 +1,11 @@
 class Livro: 
-    def __init__(self, titulo, autor, ano, categoria, editora):
+    def __init__(self, titulo, autor, ano, categoria, editora, emprestado=False):
         self.titulo = titulo
         self.autor = autor
         self.ano = ano
         self.categoria = categoria
         self.editora = editora
-        self.emprestado = False
+        self.emprestado = emprestado
 
     def __str__(self):
         return self.titulo
@@ -16,7 +16,8 @@ class Livro:
             'autor': self.autor,
             'ano': self.ano,
             'categoria': self.categoria,
-            'editora': self.editora
+            'editora': self.editora,
+            'status':  'Emprestado' if self.emprestado else 'Livre'
         }
     
 class Pessoa:
