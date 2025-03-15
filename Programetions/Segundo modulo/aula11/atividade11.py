@@ -6,9 +6,6 @@ class Livro:
         self.categoria = categoria
         self.editora = editora
         self.emprestado = emprestado
-
-    def __str__(self):
-        return self.titulo
     
     def get_dict(self):
         return {
