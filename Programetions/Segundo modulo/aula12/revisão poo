@@ -1,0 +1,67 @@
+# 1. Criando uma Classe e um Objeto
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome  # Atributo público da instância
+        self.idade = idade
+
+    def apresentar(self):  # Método da classe
+        print(f"Olá, meu nome é {self.nome} e tenho {self.idade} anos.")
+
+# Criando um objeto (instância da classe)
+pessoa1 = Pessoa("Cauã", 16)
+pessoa1.apresentar()
+
+
+# 2. Encapsulamento (Modificadores de Acesso)
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular  # Atributo público
+        self.__saldo = saldo  # Atributo privado
+
+    def depositar(self, valor):
+        self.__saldo += valor  # Modificando um atributo privado
+
+    def ver_saldo(self):
+        return self.__saldo  # Método para acessar um atributo privado
+
+conta = ContaBancaria("Onome", 1000)
+conta.depositar(500)
+print(conta.ver_saldo())  # Correto, pois acessamos via método
+
+
+# 3. Herança (Uma classe herdando atributos e métodos de outra)
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome  # Atributo público
+
+    def fazer_som(self):
+        pass  # Método abstrato (deve ser implementado na subclasse)
+
+# A classe Cachorro herda de Animal
+class Cachorro(Animal):
+    def fazer_som(self):
+        return "Au Au!"
+
+# Criando um objeto de Cachorro
+dog = Cachorro("Rex")
+print(dog.fazer_som())  # Saída: Au Au!
+
+
+# 4. Polimorfismo (Mesmo método, diferentes implementações)
+class Gato(Animal):
+    def fazer_som(self):
+        return "Miau!"
+
+# Criando um objeto de Gato
+gato = Gato("Whiskers")
+print(gato.fazer_som())  # Saída: Miau!
+
+
+# 5. Classes e Métodos Estáticos (Métodos que não precisam de instância)
+class Matematica:
+    @staticmethod
+    def somar(a, b):
+        return a + b
+
+# Chamando um método estático diretamente da classe, sem instanciar um objeto
+print(Matematica.somar(3, 7))  # Saída: 10
