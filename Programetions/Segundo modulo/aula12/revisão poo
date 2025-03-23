@@ -65,3 +65,29 @@ class Matematica:
 
 # Chamando um método estático diretamente da classe, sem instanciar um objeto
 print(Matematica.somar(3, 7))  # Saída: 10
+
+# 6. Exemplo de Herança com super()
+class Animal:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    
+    def emitir_som(self):
+        return "Som genérico de animal"
+    
+    def dormir(self):
+        return f"{self.nome} está dormindo."
+
+class Cachorro(Animal):
+    def __init__(self, nome, idade, raca):
+        super().__init__(nome, idade)  # Chama o construtor da classe pai
+        self.raca = raca
+    
+    def emitir_som(self):
+        return "Au au!"  # Modifica o comportamento do método
+
+# Exemplo de uso
+cachorro = Cachorro("Rex", 3, "Labrador")
+print(f"Nome: {cachorro.nome}, Idade: {cachorro.idade}, Raça: {cachorro.raca}")
+print(cachorro.emitir_som())
+print(cachorro.dormir())
