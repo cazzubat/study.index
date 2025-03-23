@@ -1,5 +1,8 @@
-#Oi, tudo bem? Será que você pode me ajudar a criar um sistema para minha loja? 
-#Gostaria de algo onde eu pudesse visualizar quem fez os pedidos e acessar o cardápio de forma fácil.
+#SISTEMA DE HAMBURGUERIA:
+#"Estou querendo criar um sistema pra minha hamburgueria...
+#Vou precisar de um cardápio, um sistema de fidelização de clientes,
+#e um jeito pra pessoa poder fazer pedido e vir aqui pegar ou mandar motoboy entregar?
+#E aí você conseque fazer até semana que vem?"
 
 class item_cardapio:
     def __init__(self,pao,carne,salada,molho,nome,preço=float):
@@ -21,20 +24,30 @@ class item_cardapio:
         }
 
 class Cliente:
-    def __init__(self,nome,cpf=int,endereço=str):
+    def __init__(self,nome,cpf=int,endereço=str,fidelizacao=False):
         self.nome = nome
         self.cpf = cpf
         self.endereço = endereço
         self.pedidos = []
+        self.fidelizacao = fidelizacao
 
     def get_dict_cliente(self):
         dicionario = {
             'Nome': self.nome.capitalize(),
             'CPF': self.cpf,
             'Endereço': self.endereço,
-            'Pedidos': self.pedidos_para_string()
+            'Pedidos': self.pedidos_para_string(),
+            'Fidelização': 'Esse cliente é fidelizado' if self.fidelizacao_cliente() else 'Esse cliente não é fidelizado'
         }
         return dicionario 
+    
+    def fidelizacao_cliente(self):
+        quantidade_pedidos = len(self.pedidos)
+        if quantidade_pedidos >= 2:
+                self.fidelizacao = True
+                return True
+        return False
+
 
     def pedidos_para_string(self):
         return ", ".join(pedido.nome for pedido in self.pedidos) if self.pedidos else "Nenhum pedido registrado"
@@ -194,7 +207,7 @@ def menu():
         
         continue1()
 
-    if opcao == '2':
+    elif opcao == '2':
         if not restaurante.clientes:
             print('Não há nenhum cliente cadastrado.')
         else:
@@ -203,7 +216,7 @@ def menu():
 
         continue1()
 
-    if opcao == '3':
+    elif opcao == '3':
         try:
             nome = input('Nome: ').lower().strip()
             cpf = int(input('CPF: '))
@@ -216,7 +229,7 @@ def menu():
         
         continue1()
     
-    if opcao == '4':
+    elif opcao == '4':
         if restaurante.funcionarios:
             for user in restaurante.funcionarios:
                 print(user.get_dict_funcionario())
@@ -225,7 +238,7 @@ def menu():
         
         continue1()
     
-    if opcao == '5':
+    elif opcao == '5':
         print('Insira o seu login de funcionario: ')
         print('\n')
         try:
@@ -234,6 +247,7 @@ def menu():
             senha = input('Senha: ')
         except ValueError:
             print('Você inseriu um valor invalido.')
+            continue1()
 
         validar_funcionario = Funcinario(nome, cpf, senha)
 
@@ -261,7 +275,7 @@ def menu():
         continue1()
 
     
-    if opcao == '6':
+    elif opcao == '6':
         if restaurante.cardapio:
             for item in restaurante.cardapio:
                 print(item.get_dict_cardapio())
@@ -270,7 +284,7 @@ def menu():
         
         continue1()
     
-    if opcao == '7':
+    elif opcao == '7':
         print('Insira suas informações de cliente:')
         print('\n')
         try:
@@ -293,7 +307,7 @@ def menu():
 
         continue1()
     
-    if opcao == '8':
+    elif opcao == '8':
         print('Insira o seu login de funcionario: ')
         print('\n')
         try:
@@ -318,7 +332,7 @@ def menu():
     
         continue1()
     
-    if opcao == '9':
+    elif opcao == '9':
         print('Insira o seu login de funcionario: ')
         print('\n')
         try:
@@ -343,7 +357,7 @@ def menu():
     
         continue1()
 
-    if opcao == '10':
+    elif opcao == '10':
         print('Insira o seu login de funcionario: ')
         print('\n')
         try:
@@ -368,7 +382,7 @@ def menu():
     
         continue1()
 
-    if opcao == '11':
+    elif opcao == '11':
         return print('Você saiu do menu.')
 
     else:
