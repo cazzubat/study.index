@@ -3,7 +3,7 @@ import requests
 import os
 
 # Configuração da API Groq
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or ('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')
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # Função para gerar a resposta do chatbot usando a API da Groq
