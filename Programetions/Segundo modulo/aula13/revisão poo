@@ -49,20 +49,4 @@ class Gatao(Animal):
 d1 = Dogao("Cachorrão",10,"Caramelo")
 print(vars(d1))
 print(d1.fazer_som())
-#==================================================================
 
-#Para a criação
-
-#sudo apt install python3.12-venv
-#apt install python3.12-venv
- 
-
-#No linux 
-#Para colar no terminal ctrl + shift + v
-#python3 -m venv .venv
-
-#No windows
-#python -m venv .venv 
-
-#Para ativar
-#source .venv/bin/activate
