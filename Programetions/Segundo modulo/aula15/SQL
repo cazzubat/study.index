@@ -1,0 +1,43 @@
+-- Tabela de Escola
+CREATE TABLE escola (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100),
+  endereco VARCHAR(255),
+  telefone VARCHAR(20)
+);
+
+-- Tabela de Funcionários
+CREATE TABLE funcionario (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100),
+  cargo VARCHAR(100),
+  salario DECIMAL(10, 2),
+  escola_id INT,
+  FOREIGN KEY (escola_id) REFERENCES escola(id)
+);
+
+-- Tabela de Alunos
+CREATE TABLE aluno (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100),
+  data_nascimento DATE,
+  escola_id INT,
+  FOREIGN KEY (escola_id) REFERENCES escola(id)
+);
+
+-- Inserindo escolas
+INSERT INTO escola VALUES (1, 'Escola Municipal A', 'Rua A, 123', '+55 11 1234-5678');
+INSERT INTO escola VALUES (2, 'Escola Estadual B', 'Avenida B, 456', '+55 21 8765-4321');
+
+
+-- Inserindo funcionários
+INSERT INTO funcionario VALUES (1, 'João Silva', 'Professor', 2500.00, 1);
+INSERT INTO funcionario VALUES (2, 'Maria Oliveira', 'Secretária', 1800.00, 1);
+INSERT INTO funcionario VALUES (3, 'Carlos Souza', 'Professor', 2200.00, 2);
+INSERT INTO funcionario VALUES (4, 'Ana Santos', 'Diretora', 3500.00, 2);
+
+-- Inserindo alunos
+INSERT INTO aluno VALUES (1, 'Lucas Pereira', '2010-05-10', 1);
+INSERT INTO aluno VALUES (2, 'Laura Costa', '2009-11-15', 1);
+INSERT INTO aluno VALUES (3, 'Gabriel Almeida', '2011-07-22', 2);
+INSERT INTO aluno VALUES (4, 'Fernanda Souza', '2010-02-01', 2);
