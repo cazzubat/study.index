@@ -1,0 +1,45 @@
+-- Tabela de escolas
+CREATE TABLE escolas (
+    id_escola INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    cidade VARCHAR(100),
+    tipo VARCHAR(50), -- Ex: 'Pública' ou 'Privada'
+    status VARCHAR(20) -- Ex: 'Ativa', 'Inativa'
+);
+
+-- Tabela de alunos
+CREATE TABLE alunos (
+    id_aluno INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    id_escola INT,
+    status VARCHAR(20), -- Ex: 'Ativo', 'Inativo', 'Transferido', 'Graduado'
+    data_nascimento DATE,
+    data_matricula DATE,
+    FOREIGN KEY (id_escola) REFERENCES escolas(id_escola)
+);
+
+-- Tabela de telefones (relacionada a escolas)
+CREATE TABLE telefones (
+    id_telefone INT PRIMARY KEY AUTO_INCREMENT,
+    id_escola INT,
+    telefone VARCHAR(20),
+    FOREIGN KEY (id_escola) REFERENCES escolas(id_escola)
+);
+
+INSERT INTO escolas (nome, cidade, tipo, status) VALUES
+('Escola Pública Central', 'Belo Horizonte', 'Pública', 'Ativa'),
+('Escola Privada Sul', 'São Paulo', 'Privada', 'Ativa'),
+('Escola Antiga', 'Curitiba', 'Pública', 'Inativa');
+
+INSERT INTO alunos (nome, id_escola, status, data_nascimento, data_matricula) VALUES
+('Carlos', 1, 'Ativo', '2004-05-12', '2020-02-01'),
+('Ana', 2, 'Inativo', '2002-03-10', '2018-01-10'),
+('Bruno', NULL, 'Inativo', '2001-07-25', '2016-04-05'),
+('Diana', 3, 'Transferido', '2005-09-30', '2021-06-15'),
+('Eduardo', 1, 'Ativo', '2007-08-20', '2023-02-20'),
+('Fernanda', NULL, 'Inativo', '2003-10-05', '2019-11-11');
+
+INSERT INTO telefones (id_escola, telefone) VALUES
+(1, '(31) 3333-4444'),
+(2, '(11) 2222-3333'),
+(3, '(41) 9999-8888');
