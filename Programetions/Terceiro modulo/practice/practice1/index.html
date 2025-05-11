@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste título &lt;h1&gt;</h1>
+    <p>A tag <strong>&lt;h1&gt;</strong> define o título principal de uma página ou seção, sendo crucial para a hierarquia de conteúdo e SEO.</p>
+    <h3>exemplo:</h3>
+    <h4>Título teste</h4>
+    
+    <hr>
+
+    <h1>Parágrafo &lt;p&gt;</h1>
+    <p>A tag <strong>&lt;p&gt;</strong> é usada para criar parágrafos de texto em HTML, organizando o conteúdo em blocos.</p>
+    <h3>exemplo:</h3>
+    <p><strong>&lt;p&gt;</strong> teste parágrafo</p>
+    
+    <hr>
+
+    <h1>Marcação &lt;mark&gt;</h1>
+    <p>A tag <strong>&lt;mark&gt</strong> é usada para destacar ou marcar texto importante em uma página, geralmente com um fundo amarelo.</p>
+    <h3>exemplo:</h3>
+    <mark><strong>&lt;mark&gt;</strong> teste marcação</mark>
+
+    <hr>
+
+    <h1>Teste listas <strong>&lt;ol&gt;</strong> e <strong>&lt;ul&gt;</strong></h1>
+    <p>A tag <strong>&lt;li&gt;</strong> é usada para definir itens de lista dentro de uma lista ordenada <strong>(&lt;ol&gt;)</strong> ou não ordenada <strong>(&lt;ul&gt;)</strong>.</p>
+    <ol>
+        <li><strong>&lt;ol&gt;</strong><strong>&lt;li&gt;</strong> teste lista ordenada</li>
+    </ol>
+    <ul>
+        <li><strong>&lt;ul&gt;</strong><strong>&lt;li&gt;</strong> teste lista não ordenada</li>
+    </ul>
+
+    <hr>
+
+    <h1>Seções em div e estilização em span</h1>
+    <p><strong>&lt;div&gt;</strong> é um elemento de bloco usado para estruturar seções grandes e quebra a linha.</p>
+    <p><strong>&lt;span&gt;</strong> é inline, usado para estilizar partes pequenas do texto sem quebrar a linha.</p>
+
+    <h3>exemplos:</h3>
+    <div style="background-color:cadetblue;">
+        <strong>&lt;div&gt;</strong> Olá mundo.
+    </div>
+    <span style="background-color: red;">
+        <strong>&lt;span&gt;</strong>Olá mundo.
+    </span>
+
+    <h3>os dois juntos:</h3>
+    <div style="background-color: antiquewhite;">
+        <strong>&lt;div&gt;</strong>Olá <span style="background-color: brown;"><strong>&lt;span&gt;</strong>mundo.</span>
+    </div>
+
+    <hr>
+
+    <h1>Negrito em &lt;b&gt; e &lt;strong&gt;</h1>
+    <p><b>&lt;b&gt;</b> deixa o texto negrito apenas com efeito visual.</p>
+    <p><strong>&lt;strong&gt;</strong> também deixa em negrito, mas dá ênfase semântica (mais importante para acessibilidade e SEO).</p>
+
+    <hr>
+
+    <h1>Itálico em &lt;i&gt; e &lt;em&gt;</h1>
+    <p><i>&lt;i&gt;</i> deixa o texto *em itálico* apenas com efeito visual.</p>
+    <p><em>&lt;em&gt;</em> também deixa em itálico, mas com ênfase semântica.</p>
+
+    <hr>
+
+    <h1>Quebrar a linha &lt;br&gt;</h1>
+    <p>A tag <strong>&lt;br&gt;</strong> é usada para quebrar a linha dentro de um parágrafo ou texto sem iniciar um novo bloco.</p>
+
+    <hr>
+
+    <h1>Sublinhar &lt;u&gt;</h1>
+    <p>A tag <strong>&lt;u&gt;</strong> <u>sublinha</u> o texto, mas não tem significado semântico (só visual).</p>
+    
+    <hr>
+
+    <h1>Atributo style</h1>
+    <p>O atributo `style` é usado para aplicar CSS diretamente no elemento HTML de forma inline("em linha").</p>
+
+    <hr>
+
+    <h1>Atributo class</h1>
+    <p>O atributo class é usado para aplicar estilos CSS através de uma classe, permitindo reutilizar o mesmo estilo em vários elementos. <strong>O símbolo . é usado no CSS para selecionar elementos pela classe (class).</strong></p>
+    <h3>exemplo:</h3>
+    <style>
+        .minhaclasse{
+            background-color: blueviolet;
+        }
+    </style>
+    <div class="minhaclasse">
+        Olá, sou classe.
+    </div>
+
+    <hr>
+
+    <h1>Atributo id</h1>
+    <p>O atributo id é usado para identificar unicamente um elemento na página e aplicar estilos ou manipulações específicas com CSS ou JavaScript. <strong>(O símbolo # é usado no CSS para selecionar um elemento pelo seu id)</strong></p>
+    <h3>exemplo:</h3>
+    <style>
+        #id{
+            background-color: greenyellow;
+        }
+    </style>
+    <div id="id">
+        Olá, sou um id.
+    </div>
+
+    <hr>
+
+    <h1>Imagem &lt;img&gt;</h1>
+    <p>A tag <strong>&lt;img&gt;</strong> é usada para exibir imagens em uma página HTML, e precisa dos atributos <strong>src</strong> (caminho da imagem) e <strong>alt</strong> (texto alternativo).</p>
+    <h3>exemplo:</h3>
+    <img src="exemplo_img.png" alt="Exemplo de código HTML usando a tag &lt;img&gt; com os atributos src e alt" style="width: 300px; height: 200px;">
+
+    <hr>
+
+    <h1>Quebras temáticas &lt;hr&gt;</h1>
+    <p>A tag <strong>&lt;hr&gt;</strong> é usada para criar uma linha horizontal, geralmente para separar seções do conteúdo.</p>
+    <h3>exemplo:</h3>
+    <hr>
+
+    <br>
+
+    <hr>
+
+    <h1>Link &lt;a&gt;</h1>
+    <p>A tag <strong>&lt;a&gt;</strong> é usada para criar links, permitindo navegar entre páginas.</p>
+    <h3>exemplo:</h3>
+    <a target="_blank" href="https://github.com/cazzubat/">Link</a>
+    
+    <hr>
+</body>
+</html>
