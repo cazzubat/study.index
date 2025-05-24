@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1f2223;
+}
+
+.profile-header {
+    max-width: 40rem;
+    display: flex;
+    background-color: #181a1b;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3px 0px;
+    border-radius: 5px;
+    flex-direction: row;
+    width: 900px;
+}
+
+.profile-img {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.profile-img img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.profile-info {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    gap: 0.3rem;
+    color: #d8d6d1;
+}
+
+p, li {
+    color: #666461;
+}
+
+h3 {
+    color: #d8d6d1;
+}
+
+.container{
+    font-size: 13px;
+    background-color: #181a1b;
+    border-radius: 5px;
+    max-width: 40rem;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+}
+
+.profile-bio {
+    padding: 0.1rem;
+    max-width: 40rem;
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.profile-infomation {
+    background-color: #181a1b;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181a1b;
+    color: #d8d6d1;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+footer a {
+    text-decoration: none;
+}
