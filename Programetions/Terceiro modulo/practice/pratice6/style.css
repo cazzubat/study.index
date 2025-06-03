@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9FBF2;
+    color: #000000;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    align-items: center; /* centraliza horizontalmente */
+    min-height: 100vh; /* para ocupar toda a altura da tela */
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: hsl(3, 29%, 24%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 20px; 
+}
+
+.botao-principal a, 
+.botao-principal img {
+    background-color: transparent;
+    color: #ffffff;
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    height: 30px;
+    flex-direction: row-reverse; 
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.noticias-geral {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px; 
+    gap: 20px;
+}
+
+.container {
+  width: 100%; 
+  margin-top: 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-noticia {
+    font-size: xx-large;
+}
+
+.subtitulo-noticia{
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    font-size: medium;
+}
+
+.imagem-noticia img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.lead p {
+  margin-bottom: 1.5em;
+}
+
+.lead .imagem-noticia {
+  margin-bottom: 1.5em;
+}
+
+.noticia-principal .titulo-noticia {
+  margin-bottom: 15px;
+}
+
+.noticia-principal .subtitulo-noticia {
+  margin-bottom: 15px;
+}
+
+.imagem-noticia {
+  margin-bottom: 25px;
+}
+
+.noticias-secundarias .noticia {
+  margin-bottom: 20px;
+}
+
+.noticias-secundarias {
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: hsl(3, 29%, 24%);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
