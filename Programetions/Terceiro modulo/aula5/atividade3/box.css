@@ -17,7 +17,7 @@ body {
     display: flex;
     width: 100px;
     height: 100px;
-    background-color: blueviolet;
+    background-color: #8a2be2;
     border-radius: 30px;;
     font-size: larger;
     font-weight: bolder;
@@ -68,4 +68,47 @@ body {
 
 .ex3 {
      display: flex;
+}
+
+.ex4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ex5 {
+    display: flex;
+}
+
+.ex6 {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.ex6 .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+}
+
+.ex6 .box:first-child {
+    z-index: 1;
+    background: #00b7ff;
+    opacity: 0.3;
+    border-radius: 20px;
+}
+
+.ex6 .box:last-child {
+    background: #8a2be2;
+    z-index: 2;
+    opacity: 0.7;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
