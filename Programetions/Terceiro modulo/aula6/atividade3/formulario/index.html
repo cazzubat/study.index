@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contato</title>
+</head>
+<body>
+    <main>
+        <div class="class-header">
+            <header>
+                <h1>Explorar</h1>
+                <a href="../index.html" target="_blank" rel="noopener noreferrer">Início</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Contato</a>
+                <a href="formulario/index.html" target="_blank" rel="noopener noreferrer">Projetos</a>
+            </header>
+        </div>
+        <div>
+            <section>
+                <h2>Entre em contato comigo</h2>
+                <form action="#">
+                    <fieldset>
+                        <legend>Informações de contato</legend>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="comentarios">Comentários:</label>
+                        <textarea name="comentarios" id="comentarios" rows="4" cols="50" placeholder="Digite seus comentários aqui..."></textarea>
+                        <button type="submit" onclick="alert('ENVIADO')">Enviar</button>
+                        <div>
+                            <section>
+                                <div class="contact-reason">
+                                    <form action="#">
+                                        <legend><strong>Motivo de contato</strong></legend>
+                                        <label for="professional-contact">Profissional</label>
+                                        <input type="radio" value="Profissional" id="professional-contact" name="contact-reason">
+                                        <label for="personal-contact">Pessoal</label>
+                                        <input type="radio" value="Pessoal" id="personal-contact" name="contact-reason">
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
