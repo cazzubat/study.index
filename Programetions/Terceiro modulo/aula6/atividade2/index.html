@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid Básico</title>
+    <style>
+
+        /* Definindo a estrutura do grid */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas, todas com mesmo tamanho *//* 3 colunas, todas com mesmo tamanho */
+            gap: 1px; /* Espaçamento entre os itens */
+            padding-bottom: 10px;
+        }
+
+        /* Estilo de cada item do grid */
+        .item {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+            }
+        }
+
+
+        .primeira-linha {
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 8px;
+        }
+
+        .linhas-restantes {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 1</div>
+        
+    </div>
+
+    <div class="container primeira-linha">
+        <div class="item">1fr</div>
+        <div class="item">2fr</div>
+        <div class="item">1fr</div>
+      </div>
+      
+      <div class="container linhas-restantes">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+      </div>
+      
+
+</body>
+</html>
