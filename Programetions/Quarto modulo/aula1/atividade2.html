@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Korut</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fdfdfd;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab7;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bem-vindo ao Korut!</h1>
+    <h2>Login:</h2>
+    <input id="email" type="text" placeholder="Digite seu e-mail" />
+    <input id="senha" type="password" placeholder="Digite sua senha" />
+    <button onclick="Login()">Entrar</button>
+    <span id="feedback"></span>
+  </div>
+</body>
+<script>
+    let inputEmail = document.getElementById('email');
+    let inputSenha = document.getElementById('senha');
+    let spanzinho = document.getElementById('feedback')
+
+    let senhaCorreta = '123456'
+    let emailCorreto = 'teste@email.com'
+
+    function Login() {
+        let email = inputEmail.value 
+        let senha = inputSenha.value
+        
+        if (email === emailCorreto && senha === senhaCorreta) {
+            spanzinho.style.color = 'green'
+            spanzinho.innerText = 'Login realizado com sucesso!'
+        } else {
+            spanzinho.style.color = 'red'
+            spanzinho.innerText = 'Senha ou e-mail incorretos!'
+        }
+    }
+
+</script>
+</html>
