@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02</title>
+</head>
+<body>
+    <h1> Contador </h1>
+    <input type="number" id="numero">
+    <button onclick="contador()">Contar</button>
+
+    <p id="contagem"></p>
+
+    <script>
+        
+        // Ex02. Faça um programa que peça um numero para o usuário através de um input, e depois mostre uma contagem de 1 até o numero informado pelo usuário dentro de um "p" (paragrafo)
+        // 1. Busque o numero digitado pelo usuário
+        // 2. Busque o paragrafo de "contagem"
+        // 3. Utilize o while para mostrar a contagem (concatenada) na tela
+        function contador() {
+            let numero = Number(document.getElementById('numero').value);
+            let contador = 0;
+            let contagem = [];
+
+            while (contador < numero) {
+                contador++;
+                contagem.push(contador);
+
+            }
+            document.getElementById('contagem').innerText = contagem.join(" ");
+        }
+
+
+    </script>
+</body>
+</html>
