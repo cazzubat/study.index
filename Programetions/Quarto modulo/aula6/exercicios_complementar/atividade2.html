@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mudar a Cor!</title>
+</head>
+
+<body>
+    <button onclick="changeColor(this)" data-color="red">Vermelho</button>
+    <button onclick="changeColor(this)" data-color="green">Verde</button>
+    <button onclick="changeColor(this)" data-color="blue">Azul</button>
+    <button id="reset" onclick="changeColor(this)">Resetar</button>
+
+    <script>
+        function changeColor(element) {
+            if (element.id === 'reset') {
+                document.body.style.backgroundColor = 'initial';
+            } else {
+                const color = element.getAttribute('data-color');
+                document.body.style.backgroundColor = color;
+            }
+        }
+    </script>
+</body>
+
+</html>
