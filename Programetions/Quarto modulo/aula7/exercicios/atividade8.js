@@ -14,8 +14,7 @@ const nomes = [
     "Thays"
 ]
 
-const nomes_filtrados = nomes.filter((nome) => nome.toLowerCase().includes("joão"))
+const nomes_filtrados = nomes
+.filter((nome) => nome.toLowerCase().includes("joão"))
+.map((nome) => nome.toUpperCase())
 console.log(nomes_filtrados)
-
-const nomes_maiusculo = nomes.map((nome) => nome.toUpperCase())
-console.log(nomes_maiusculo)
