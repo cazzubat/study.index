@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Map
+        // Aplicar um Aumento de 10%
+        const precos = [40.9, 44.99, 20, 10, 1200]
+        const precosCorrigidos = precos.map((preco) => preco * 1.1)
+
+        // Com JS Puro na Mão
+        // const precosCorrigidos = []
+
+        // for (const preco of precos) {
+        //     precosCorrigidos.push(preco * 1.1)
+        // }
+
+        // console.log(precos)
+        // console.log(precosCorrigidos)
+
+        // Filter
+        const produtos = [
+            "Café",
+            "Arroz",
+            "Feijão",
+            "Azeite de Oliva",
+            "Pão",
+            "Leite",
+            "Queijo",
+            "Manteiga",
+            "Macarrão",
+            "Chocolate"
+        ];
+        const filtro = 'Ma'
+        
+        const precosFiltrados = precos.filter((preco) => preco < 45)
+        const produtosFiltrados = produtos.filter((produto) => produto.includes(filtro))
+
+        // Com JS Puro na Mão
+        // const produtosFiltrados = []
+
+        // for (const produto of produtos) {
+        //     if (produto.includes(filtro)) {
+        //         produtosFiltrados.push(produto)
+        //     }
+        // }
+
+        console.log(produtos)
+        console.log(produtosFiltrados)
+
+        // Reduce (...)
+
+    </script>
+</body>
+</html>

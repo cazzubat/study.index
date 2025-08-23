@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Callbacks
+        // Uma callback é quando a gente passa uma função como parametro
+        // para outra função executar.
+        const produtos = [
+            "Café",
+            "Arroz",
+            "Feijão",
+            "Azeite de Oliva",
+            "Pão",
+            "Leite",
+            "Queijo",
+            "Manteiga",
+            "Macarrão",
+            "Chocolate"
+        ];
+
+        // For Convencional
+        // for (const produto of produtos) {
+        //     console.log(produto)
+        // }
+
+        // ForEach: Para cada Elemento do Array, Execute A Arrow Function
+        // Passando no primeiro parametro o elemento corrente do array.
+        produtos.forEach((produto) => console.log(produto))
+    </script>
+</body>
+</html>
