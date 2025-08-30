@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Cadastre seu Carro </h1>
+    <input type="text" id="marca" placeholder="Marca do carro"> <br>
+    <input type="text" id="modelo"> <br>
+    <button> Cadastrar </button>
+
+    <script>
+        // Objetos - Elementos HTML
+        // Ao utilizar o getElementBy*, o retorno é um objeto
+        // que representa o elemento HTML selecionado
+        // Podemos acessar e modificar as propriedades
+        // desses objetos
+        // Exemplo: Acessar o id digitado em um input
+        const input = document.getElementById('modelo')
+        console.log(input.id) // Acessa o id digitado no input
+
+        // Exemplo: Alterar valores via JavaScript
+        input.placeholder = "Modelo do carro"
+        
+        // Alterar estilos CSS via JavaScript
+        input.style.border = "2px solid red"
+    </script>
+</body>
+</html>
