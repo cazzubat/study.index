@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Telefone</h1>
+
+    <div>
+      <label for="telefone"> Insira seu Telefone: </label>
+      <input type="tel" id="telefone" />
+    </div>
+    
+    <p id="adicionar"></p>
+
+    <button onclick="getNumero()">Adicionar Número</button>
+
+
+    <script>
+      function getNumero() {
+        let numero = document.getElementById("telefone").value;
+
+        let adicionarp = document.getElementById("adicionar");
+        adicionarp.innerHTML += numero;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continha</title>
+  </head>
+  <body>
+    <h1>IMC</h1>
+
+    <div>
+      <label for="number1">Insira seu Peso</label>
+      <input type="number" id="number1" />
+    </div>
+
+    <div>
+      <label for="number2">Insira sua Altura</label>
+      <input type="number" id="number2" />
+    </div>
+
+    <button onclick="">Calcular IMC</button>
+
+    <script>
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", function () {
+        const peso = Number(document.getElementById("number1").value);
+        const altura = Number(document.getElementById("number2").value);
+        const imc = peso / (altura * altura);
+        alert(`O Resultado do seu IMC: ${imc.toFixed(2)}`);
+      });
+    </script>
+  </body>
+</html>

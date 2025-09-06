@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex05 - Contador</title>
+  </head>
+  <body>
+
+    <h2>Contador</h2>
+
+    <p id="contador">0</p>
+
+    <button id="incrementar">Incrementar</button>
+    <button id="decrementar">Decrementar</button>
+
+    <script>
+      let valor = 0;
+      
+      const contador = document.getElementById("contador");
+      document.getElementById("incrementar").onclick = function () {
+        valor++;
+        contador.textContent = valor;
+      };
+      
+      document.getElementById("decrementar").onclick = function () {
+        valor--;
+        contador.textContent = valor;
+      };
+    </script>
+  </body>
+</html>

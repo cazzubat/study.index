@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continha</title>
+  </head>
+  <body>
+    <h1>Soma</h1>
+
+    <div>
+      <label for="number1">Primeiro Número</label>
+      <input type="number" id="number1" />
+    </div>
+
+    <div>
+      <label for="number2">Segundo Número</label>
+      <input type="number" id="number2" />
+    </div>
+
+    <button onclick="">Somar</button>
+
+    <script>
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", function () {
+        const number1 = document.getElementById("number1");
+        const number2 = document.getElementById("number2");
+        const sum = parseInt(number1.value) + parseInt(number2.value);
+        alert(`O Resultado da Soma é ${sum}!!`);
+      });
+    </script>
+  </body>
+</html>
