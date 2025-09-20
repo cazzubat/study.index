@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar e Remover Parágrafos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 100px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Adicionar e Remover Parágrafos</h1>
+    
+    <!-- Botões para adicionar e remover parágrafos -->
+    <button id="adicionarParagrafo">Adicionar Parágrafo</button>
+    <button id="removerParagrafo">Remover Último Parágrafo</button>
+
+    <!-- Div onde os parágrafos serão adicionados/removidos -->
+    <div id="container"></div>
+
+    <script>
+        // Selecionando os botões e o container
+        const adicionarBtn = document.getElementById('adicionarParagrafo');
+        const removerBtn = document.getElementById('removerParagrafo');
+        const container = document.getElementById('container');
+
+        // Função para adicionar um novo parágrafo
+        adicionarBtn.addEventListener('click', () => {
+            // Criando o novo parágrafo
+            const novoParagrafo = document.createElement('p');
+            novoParagrafo.textContent = 'Este é um novo parágrafo!';
+
+            // Adicionando o parágrafo ao container
+            container.appendChild(novoParagrafo);
+        });
+
+        // Função para remover o último parágrafo
+        removerBtn.addEventListener('click', () => {
+            // Verificando se o container tem algum parágrafo para remover
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            }
+        });
+    </script>
+
+</body>
+</html>

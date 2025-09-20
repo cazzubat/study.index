@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Atributos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 18px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Alterar Atributos de Imagem e Link</h1>
+    
+    <!-- Imagem com id "minhaImagem" -->
+    <img id="minhaImagem" src="https://via.placeholder.com/400" alt="Imagem Original">
+    
+    <br><br>
+
+    <!-- Link com id "meuLink" -->
+    <a id="meuLink" href="https://www.google.com" target="_blank">Visite o Google</a>
+
+    <br><br>
+
+    <!-- Botão para alterar os atributos -->
+    <button id="meuBotao">Alterar Atributos</button>
+
+    <script>
+        // Selecionando os elementos HTML
+        const imagem = document.getElementById('minhaImagem');
+        const link = document.getElementById('meuLink');
+        const botao = document.getElementById('meuBotao');
+
+        // Função que altera os atributos quando o botão é clicado
+        botao.addEventListener('click', function() {
+            // Alterando o src da imagem
+            imagem.setAttribute('src', 'https://labetno.ufpa.br/images/galeria_em_artigos/image03_grd.png');
+            
+            // Alterando o href do link
+            link.setAttribute('href', 'https://www.ufpa.br');
+            link.textContent = 'Visite o site da UFPA';
+        });
+    </script>
+
+</body>
+</html>

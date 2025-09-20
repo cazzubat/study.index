@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="digitado" type="text" placeholder="Digite um nome aí" />
+    <button id="botao">Clicar</button>
+    <ul id="lista"></ul>
+
+    <script>
+      const button = document.getElementById("botao");
+
+      button.addEventListener("click", function () {
+        const lista = document.getElementById("lista");
+        const escrita = document.getElementById("digitado");
+
+        const novoItem = document.createElement("li");
+        novoItem.textContent = escrita.value;
+        lista.appendChild(novoItem);
+        escrita.value = ""
+        escrita.focus()
+      });
+    </script>
+  </body>
+</html>

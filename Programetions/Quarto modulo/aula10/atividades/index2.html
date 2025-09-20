@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Cor de Fundo das Divs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .box {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #ccc;
+            font-size: 18px;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Alterar Cor de Fundo das Divs</h1>
+    
+    <!-- Três divs com a classe "box" -->
+    <div class="box">
+        <p>Este é o primeiro parágrafo dentro da div.</p>
+    </div>
+    <div class="box">
+        <p>Este é o segundo parágrafo dentro da div.</p>
+    </div>
+    <div class="box">
+        <p>Este é o terceiro parágrafo dentro da div.</p>
+    </div>
+
+    <br><br>
+
+    <!-- Botão para alterar a cor de fundo -->
+    <button onclick="alterarCorDeFundo()">Alterar Cor de Fundo</button>
+
+    <script>
+        // Função para alterar a cor de fundo das divs
+        function alterarCorDeFundo() {
+            // Selecionando todas as divs com a classe "box"
+            const divs = document.querySelectorAll('.box');
+            
+            // Definindo cores para cada div
+            const cores = ['#FF5733', '#33FF57', '#3357FF'];
+
+            // Loop para alterar a cor de fundo de cada div
+            divs.forEach((div, index) => {
+                div.style.backgroundColor = cores[index];
+            });
+        }
+    </script>
+
+</body>
+</html>
