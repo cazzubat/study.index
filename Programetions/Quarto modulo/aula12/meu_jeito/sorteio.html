@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight{
+        font-weight: 700;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sorteio</h1>
+
+    <form id="participante">
+      <input type="text" id="nome" placeholder="Nome dos Participantes" />
+      <br />
+      <input type="text" id="email" placeholder="Email dos Participantes" />
+      <br />
+
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+    <button id="sortear">Sortear</button>
+    
+    <hr />
+
+    <h2>Participantes</h2>
+    <ul id="participantes"></ul>
+
+    <script>
+      const participantes = []
+      const formParticipantes = document.getElementById("participante");
+
+      function handleAdicionar(event) {
+        event.preventDefault();
+
+        const participante = {
+          nome: formParticipantes.nome.value,
+          email: formParticipantes.email.value,
+        };
+
+        participantes.push(participante)
+        console.log(participantes)
+
+        const listaParticipantes = document.getElementById("participantes");
+
+        const novoItem = document.createElement("li");
+
+        novoItem.textContent = `Nome: ${participante.nome} - Email: ${participante.email}`;
+        listaParticipantes.appendChild(novoItem);
+
+        formParticipantes.reset();
+        formParticipantes.nome.focus();
+      }
+      
+      formParticipantes.addEventListener("submit", handleAdicionar);
+
+      function handleSortear() {
+        const indexSorteado = Math.floor(Math.random() * (participantes.length))
+        const participanteSorteado = participantes[indexSorteado]
+        
+        const pResultado = document.querySelector('#resultado')
+        pResultado.innerHTML = `O participante <span class="highlight">${participanteSorteado.nome}</span> foi sorteado! Entre em contato pelo email: <span class="highlight">${participanteSorteado.email}</span>. `
+
+      }
+
+      const buttonSortear = document.getElementById('sortear')
+      buttonSortear.addEventListener('click', handleSortear)
+    </script>
+  </body>
+</html>

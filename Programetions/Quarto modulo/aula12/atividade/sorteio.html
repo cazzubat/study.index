@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio</title>
+  </head>
+  <body>
+    <h1>Sorteio</h1>
+
+    <input type="text" id="participante" placeholder="Nome do Participante" />
+    <button id="btn-adicionar">Adicionar</button>
+
+    <hr />
+
+    <h2>Participantes</h2>
+    <ul id="participantes"></ul>
+
+    <script>
+      function handleAdicionar() {
+        // 1. Buscar o Nome do Participante
+        const participante = document.querySelector("#participante").value;
+
+        // 2. Criar o Elemento de Lista com o Participante
+        const liParticipante = document.createElement("li"); // <li></li>
+        liParticipante.textContent = participante; // <li>${participante}</li>
+
+        // 3. Adicionar esse elemento a Lista
+        const ulParticipantes = document.querySelector("#participantes");
+        ulParticipantes.appendChild(liParticipante);
+      }
+
+      const button = document.getElementById("btn-adicionar");
+      button.addEventListener("click", handleAdicionar);
+    </script>
+  </body>
+</html>
