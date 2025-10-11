@@ -1,0 +1,18 @@
+.hidden {
+  display: none;
+}
+
+.highlight {
+  color: green;
+}
+
+.participante {
+  transition: 0.3s;
+}
+
+.participante:hover {
+  color: red;
+  cursor: pointer;
+
+  font-weight: bold;
+}
